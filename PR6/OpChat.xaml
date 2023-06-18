@@ -1,0 +1,30 @@
+﻿<Window x:Class="PR6.OpChat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR6"
+        mc:Ignorable="d"
+        Title="OpChat" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pictures/anime.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=" 0.25*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="504*"/>
+            <ColumnDefinition Width="151*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="MessageList"  Grid.Row="1" Grid.Column="1" Margin="0,0,0,5" Grid.RowSpan="1" Grid.ColumnSpan="2" Opacity="0.85"/>
+        <ListBox x:Name="UsersList" Grid.Row="1" Grid.Column="0" Margin="0,0,0,51" Grid.RowSpan="2" Background="#FFF54061"/>
+        <ListBox x:Name="LoginsList" Opacity="0.75" Margin="0,0,0,340" Grid.RowSpan="2" Grid.Column="1" Background="#FFF54061"/>
+        <TextBox x:Name="MessageText" Grid.Row="2" Grid.Column="1" FontSize="24px" FontWeight="Light" TextWrapping="Wrap"/>
+        <Button Grid.Column="2" Grid.Row="2" Content="--&gt;" FontSize="30px" Click="SendButton" Grid.ColumnSpan="2" Background="#FF0FE6D7"/>
+        <Button Grid.Row="2" Content="&lt;--" FontSize="30px" Click="ExitButton" Background="#FF0FE6D7"/>
+    </Grid>
+</Window>
